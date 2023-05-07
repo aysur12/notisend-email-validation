@@ -36,6 +36,11 @@ const paths = {
     src: './src/assets/fonts/**/*.{ttf,woff,woff2}',
     dist: './dist/assets/fonts/',
     watch: './src/assets/fonts/**/*.{ttf,woff,woff2}'
+  },
+  favicons: {
+    src: './src/assets/favicons/**/*',
+    dist: './dist/assets/favicons/',
+    watch: './src/assets/favicons/**/*'
   }
 };
 

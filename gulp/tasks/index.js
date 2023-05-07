@@ -5,5 +5,6 @@ module.exports = {
   styles: require('./styles'),
   images: require('./images'),
   fonts: require('./fonts'),
+  favicons: require('./favicons'),
   scripts: require('./scripts'),
 }

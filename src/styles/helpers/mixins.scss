@@ -1,0 +1,53 @@
+@mixin font-h1 {
+  font: 600 4rem/1.125 $main-font-family;
+}
+
+@mixin font-h1-mobile {
+  font: 600 2rem/1.25 $main-font-family;
+}
+
+@mixin font-h2 {
+  font: 400 3rem/1.333 $main-font-family;
+}
+
+@mixin font-h2-small {
+  font: 400 1.875rem/1.333 $main-font-family;
+}
+
+@mixin font-h2-mobile {
+  font: 400 1.25rem/1.8 $main-font-family;
+}
+
+@mixin font-h3 {
+  font: 400 2rem/1.4375 $main-font-family;
+}
+
+@mixin font-h3-mobile {
+  font: 500 1rem/1.5 $main-font-family;
+}
+
+@mixin font-h5 {
+  font: 500 1.5rem/1.25 $main-font-family;
+}
+
+@mixin font-h5-mobile {
+  font: 500 1.125rem/1.44 $main-font-family;
+}
+
+@mixin font-text-big {
+  font: 400 1.5rem/1.666 $main-font-family;
+}
+
+@mixin font-text-big-mobile {
+  font: 400 1rem/1.5 $main-font-family;
+}
+
+@mixin font-text-normal {
+  font: 400 1.125rem/1.555 $main-font-family;
+}
+
+@mixin font-text-normal-mobile {
+  font: 400 0.813rem/1.615 $main-font-family;
+}
+
+

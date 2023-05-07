@@ -1,0 +1,18 @@
+.mobile-header-login-button {
+  display: none;
+  width: 37px;
+
+  &__link {
+    color: $white;
+    font: 600 0.75rem/1.666 $main-font-family;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $yellow;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+mixin nav-menu-item(params = {})
+  -
+    const {
+      navItemName = "",
+    } = params;
+  
+  .nav-menu-item
+      details.nav-menu-item__details(title= navItemName)
+        summary.nav-menu-item__summary
+          span.nav-menu-item__title= navItemName
+          span.material-symbols-outlined.nav-menu-item__arrow
+        .nav-menu-item__dropdown

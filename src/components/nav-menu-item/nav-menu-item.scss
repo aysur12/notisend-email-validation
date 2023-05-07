@@ -1,0 +1,60 @@
+.nav-menu-item {
+  color: $white;
+  font: 600 1rem/2 $main-font-family;
+  transition: color 0.3s;
+
+  &:focus,
+  &:hover {
+    color: $yellow;
+  }
+
+  &__details {
+
+    &::after {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      content: attr(title);
+    }
+
+    &[open] .nav-menu-item__arrow::before {
+      content: '\e5ce';
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      color: $yellow;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 16px;
+    padding: 0;
+    text-align: center;
+
+    &::before {
+      content: '\e5cf';
+    }
+  }
+}
+
+.material-symbols-outlined {
+  font-size: 17px!important;
+}

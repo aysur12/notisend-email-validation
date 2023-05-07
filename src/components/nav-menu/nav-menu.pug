@@ -1,0 +1,15 @@
+include ../../components/nav-menu-item/nav-menu-item
+
+mixin nav-menu(params = {})
+  -
+    const {
+      navMenuItems = [],
+    } = params;
+
+  nav.nav-menu
+    ul.nav-menu__list
+      each item in navMenuItems
+        li.nav-menu__item
+          +nav-menu-item({
+            navItemName: item.navItemName,
+          })

@@ -1,0 +1,37 @@
+.header-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  padding: 10px;
+
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 24px 48px rgba(23, 42, 63, 0.16);
+
+  &_for {
+    &_registration {
+      background: $primary-gradient;
+
+      .header-button__link {
+        color: $white;
+      }
+    }
+  }
+
+  &__link {
+    color: #1a96ef;
+    font: 600 0.875rem/1.714 $main-font-family;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $yellow;
+    }
+  }
+
+}

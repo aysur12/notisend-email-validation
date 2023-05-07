@@ -16,11 +16,27 @@
   }
 
   &__container {
-    max-width: 1290px;
+    display: flex;
+    align-items: center;
+    max-width: 1322px;
     margin: 0 auto;
-    padding-top: 35px;
-
-
+    padding: 35px 16px 0;
   }
-  
+
+  &__logo {
+    margin-right: 60px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 1030px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
 }

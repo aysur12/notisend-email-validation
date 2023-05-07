@@ -1,0 +1,9 @@
+mixin mobile-header-login-button(params = {})
+  -
+    const {
+      buttonText= "",
+      buttonLink= "",
+    } = params;
+
+  .mobile-header-login-button
+    a.mobile-header-login-button__link(href= buttonLink)= buttonText

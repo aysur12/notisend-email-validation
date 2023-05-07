@@ -14,9 +14,15 @@ html(lang="ru")
     link(rel="manifest" href="/site.webmanifest")
     title #{title ? title : 'Email валидация'}
     link(href="./assets/styles/main.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200")
   body
     +header({
-      logImgSrc: './assets/images/logo.svg'
+      logImgSrc: './assets/images/logo.svg',
+      navMenuItems: [
+        {navItemName: "Возможности"},
+        {navItemName: "Цены"},
+        {navItemName: "Полезное"},
+      ]
     })
     block content
     include ../../components/footer/footer

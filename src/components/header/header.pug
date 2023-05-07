@@ -1,12 +1,37 @@
 include ../logo/logo
+include ../../components/nav-menu/nav-menu
+include ../../components/mobile-header-login-button/mobile-header-login-button
+include ../../components/header-button/header-button
 
 mixin header(params = {})
   -
     const {
       logImgSrc,
+      navMenuItems,
     } = params;
 
   header.header
     .header__container
       .header__logo
         +logo({logImgSrc})
+      .header__mobile-header-login-button
+        +mobile-header-login-button({
+          buttonText: "Вход",
+          buttonLink: "/mock-address/change-me",
+        })
+      .header__menu
+        .header__nav-group
+          .header__nav-menu
+            +nav-menu({navMenuItems})
+        .header__buttons
+          .header__button
+            +header-button({
+              buttonText: "Вход",
+              buttonLink: "/mock-address/change-me",
+            })
+          .header__button
+            +header-button({
+              buttonText: "Регистрация",
+              buttonLink: "/mock-address/change-me",
+              forRegistration: true,
+            })

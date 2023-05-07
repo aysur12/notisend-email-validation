@@ -1,0 +1,14 @@
+mixin header-button(params = {})
+  -
+    const {
+      buttonText= "",
+      buttonLink= "",
+      forRegistration= false,
+    } = params;
+
+    const buttonForRegistration = forRegistration ? "header-button_for_registration" : "";
+
+  .header-button(class= `${buttonForRegistration}`)
+    a.header-button__link(
+      href= buttonLink
+    )= buttonText

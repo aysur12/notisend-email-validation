@@ -1,0 +1,9 @@
+mixin logo(params = {})
+  -
+    const {
+      logImgSrc= "",
+    } = params;
+  
+  .logo
+    a.logo__link(href="./index.html")
+      img.logo__img(src=logImgSrc, alt="Логотип компании")

@@ -1,0 +1,12 @@
+include ../logo/logo
+
+mixin header(params = {})
+  -
+    const {
+      logImgSrc,
+    } = params;
+
+  header.header
+    .header__container
+      .header__logo
+        +logo({logImgSrc})

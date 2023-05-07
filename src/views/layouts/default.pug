@@ -1,3 +1,5 @@
+include ../../components/header/header
+
 block variables
 
 doctype html
@@ -13,9 +15,10 @@ html(lang="ru")
     title #{title ? title : 'Email валидация'}
     link(href="./assets/styles/main.css" rel="stylesheet")
   body
-    main
-      include ../../components/header/header
-      block content
-      include ../../components/footer/footer
+    +header({
+      logImgSrc: './assets/images/logo.svg'
+    })
+    block content
+    include ../../components/footer/footer
     script(src="./assets/js/index.js")
     block scripts

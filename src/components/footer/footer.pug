@@ -1,1 +1,63 @@
+include ../../components/footer-links/footer-links
+
+mixin footer(params= {})
+  -
+    const {
+      footerListItems,
+      downBlockLinks= [],
+      logoImgSrc= "",
+      logoImgAlt= "",
+      socialLinks= [],
+      copyrightText= "",
+      emailText= "",
+      emailHref= "",
+      telText= "",
+      telHref= "",
+    } = params;
+
+  footer.footer
+    .footer__footer-links
+      +footer-links({
+        footerListItems,
+      })
+    .footer__down-block
+      .footer__down-block-container
+        .footer__down-block-up-row
+          ul.footer__down-block-links
+            each item in downBlockLinks
+              - const {href, text} = item;
+              li.footer__down-block-link-item
+                a.footer__down-block-link(href=href)= text
+          .footer__logo-block
+            img.footer__logo(src=logoImgSrc, alt=logoImgAlt)
+        .footer__down-block-down-row
+          ul.footer__social-links
+            each item in socialLinks
+              -
+                const {
+                  href,
+                  img,
+                  isBgOrange=false,
+                  isBgRed=false,
+                  isBgBlue=false,
+                  isBgCyan=false} = item;
+                const iconWithBgOrange= isBgOrange ? "footer__social-link-img_bg_orange" : "";
+                const iconWithBgRed= isBgRed ? "footer__social-link-img_bg_red" : "";
+                const iconWithBgBlue= isBgBlue ? "footer__social-link-img_bg_blue" : "";
+                const iconWithBgCyan= isBgCyan ? "footer__social-link-img_bg_cyan" : "";
+              li.footer__social-links-item
+                a.footer__social-link(href=href)
+                  .footer__social-link-img(
+                    class= `
+                    ${iconWithBgOrange}
+                    ${iconWithBgRed}
+                    ${iconWithBgBlue}
+                    ${iconWithBgCyan}`
+                    )
+                    != img
+          .footer__copyright= copyrightText
+          .footer__contacts
+            a.footer__contacts-link(href= emailHref)= emailText
+            a.footer__contacts-link(href= telHref)= telText
+
 

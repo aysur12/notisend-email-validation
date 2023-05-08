@@ -1,0 +1,17 @@
+mixin footer-links(params={})
+  -
+    const {
+      footerListItems= [],
+    } = params;
+
+  .footer-links
+    .footer-links__container
+      each item in footerListItems
+        - const {title, linksItems= []} = item;
+        .footer-links__links-item
+          h4.footer-links__links-item-title= title
+          ul.footer-links__links-list
+            each linkItem in linksItems
+              - const {href, text} = linkItem;
+              li.footer-links__links-list-item
+                a.footer-links__link(href=href)= text

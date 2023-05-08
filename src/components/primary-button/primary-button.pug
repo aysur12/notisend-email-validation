@@ -1,0 +1,11 @@
+mixin primary-button(params = {})
+  -
+    const {
+      buttonText= "",
+      buttonLink= "",
+      forPromo= false,
+    } = params;
+
+    const primaryButtonForPromo = forPromo ? "primary-button_for_promo": "";
+
+  a.primary-button(class= `${primaryButtonForPromo}` href= buttonLink)= buttonText

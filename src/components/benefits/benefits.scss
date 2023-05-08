@@ -1,0 +1,116 @@
+.benefits {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 91px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+  }
+
+  &__title {
+    max-width: 660px;
+    margin: 0 auto;
+    color: $black;
+    @include font-h2;
+    text-align: center;
+
+    & span {
+      padding-right: 11px;
+      margin-right: 6px;
+      background-color: rgba(22, 175, 253, 0.15);
+    }
+  }
+
+  &__conditions {
+    max-width: 920px;
+    margin: 0 52px;
+    padding: 45px 120px 45px 45px;
+    background-color: $white;
+    box-shadow: 0px 24px 48px rgba(23, 42, 63, 0.16);
+    list-style-type: none;
+  }
+
+  &__conditions-item {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+  }
+
+  &__conditions-img-block {
+    width: 188px;
+    height: 188px;
+    padding: 30px;
+  }
+
+  &__conditions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__conditions-title {
+    max-width: 447px;
+    margin: 0;
+    color: $black;
+    @include font-h5;
+    text-align: left;
+  }
+
+  &__conditions-text {
+    margin: 0;
+    color: $gray;
+    @include font-text-normal;
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  &__advantages-title {
+    margin: 0;
+    color: $black;
+    @include font-h2-small;
+    text-align: center;
+  }
+
+  &__advantages-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__advantages-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-basis: 33.33%;
+  }
+
+  &__advantages-icon {
+    width: 37px;
+    height: 29px;
+    margin: 24px 9px 17px;
+    background-image: url('../../assets/images/check-icon.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__advantages-text-block {
+    margin: 0;
+    color: $gray;
+    @include font-text-advantages;
+    text-align: center;
+  }
+
+  &__advantages-text-span {
+    font-weight: 600;
+  }
+}

@@ -15,6 +15,11 @@
 
       .header-button__link {
         color: $white;
+
+        &:hover,
+        &:focus {
+          color: $yellow;
+        }
       }
     }
   }
@@ -30,7 +35,7 @@
 
     &:hover,
     &:focus {
-      color: $yellow;
+      color: $orange;
     }
   }
 

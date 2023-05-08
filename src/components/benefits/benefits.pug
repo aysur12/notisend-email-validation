@@ -1,0 +1,43 @@
+include ../../components/primary-button/primary-button
+
+mixin benefits(params={})
+  -
+    const {
+      conditionsTitle= "",
+      conditionsItems= [],
+      advantagesTitle= "",
+      advantagesItems= [],
+      buttonText,
+      buttonLink,
+    } = params;
+
+  .benefits
+    .benefits__container
+      h2.benefits__title
+        != conditionsTitle
+      ul.benefits__conditions
+        each item in conditionsItems
+          - const {imgSrc, imgAlt, title, text} = item;
+          li.benefits__conditions-item
+            .benefits__conditions-img-block
+              img.benefits__conditions-img(src=imgSrc, alt=imgAlt)
+            .benefits__conditions-content
+              h5.benefits__conditions-title= title
+              p.benefits__conditions-text= text
+      .benefits__advantages
+        h2.benefits__advantages-title= advantagesTitle
+        ul.benefits__advantages-list
+          each item in advantagesItems
+            -const {strongText, text} = item;
+            li.benefits__advantages-item
+              .benefits__advantages-icon
+              p.benefits__advantages-text-block
+                span.benefits__advantages-text-span
+                  != strongText
+                = text
+      .benefits__button
+        +primary-button({
+          buttonText,
+          buttonLink,
+        })
+

@@ -1,7 +1,7 @@
 .header {
   position: relative;
-  width: 100%;
   max-width: 1600px;
+  margin: 0 auto;
 
   &::before {
     content: '';
@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    width: 1145px;
+    width: 72%;
     height: 749px;
     background-image: url('../../assets/images/background-banner.png');
     background-repeat: no-repeat;

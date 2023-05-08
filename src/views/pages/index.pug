@@ -1,7 +1,61 @@
 extends ../layouts/default
 
+include ../../components/promo/promo
+include ../../components/benefits/benefits
+
 block variables
   - const title= "Email валидация";
 
 block content
   main.page
+    section.page__promo
+      +promo({
+        titleText: "Email валидация",
+        subtitleText: "Удалите сомнительные email-адреса до того, как они станут проблемой",
+        buttonLink: "/mock-address/change-me",
+        buttonText: "приступить",
+        btnForPromo: true,
+        promoImgSrc: "./assets/images/promo-img.svg",
+        promoImgAlt: "Промо",
+      })
+    section.page__benefits
+      +benefits({
+        conditionsTitle: "Когда нужна <span>проверка </span> email адресов?",
+        conditionsItems: [
+          {
+            imgSrc: "./assets/images/email-loading.svg",
+            imgAlt: "Email",
+            title: "Вы долго не отправляли рассылки по собранным адресам",
+            text: "Часть адресов могла превратиться в спам-ловушки, а часть адресов — стать неактивными",
+          },
+                    {
+            imgSrc: "./assets/images/email-cursor.svg",
+            imgAlt: "Email",
+            title: "Вносили контакты в адресную базу вручную",
+            text: "В список получателей могут попасть адреса с ошибками и опечатками",
+          },
+                    {
+            imgSrc: "./assets/images/email-check.svg",
+            imgAlt: "Email",
+            title: "Пополняли базу без двойного подтверждения подписки",
+            text: "Если пользователь не подтверждал подписку, могут быть адреса с ошибками и опечатками",
+          }
+        ],
+        advantagesTitle: "Валидация email обеспечит:",
+        advantagesItems: [
+          {
+            strongText: "высокую доставляемость ",
+            text: "ваших писем",
+          },
+                    {
+            strongText: "значительную экономию <br>",
+            text: "на рассылках",
+          },
+                    {
+            strongText: "хорошую репутацию <br>",
+            text: "вашего домена",
+          },
+        ],
+        buttonText: "провалидировать базу",
+        buttonLink: "/mock-address/change-me",
+      })

@@ -1,0 +1,27 @@
+include ../../components/primary-button/primary-button
+
+mixin promo(params= {})
+  -
+    const {
+      titleText= "",
+      subtitleText= "",
+      buttonLink,
+      buttonText,
+      btnForPromo,
+      promoImgSrc= "",
+      promoImgAlt= "",
+    }= params;
+
+  .promo
+    .promo__container
+      .promo__heading
+        h1.promo__title= titleText
+        p.promo__subtitle= subtitleText
+        .promo__img-block
+          img.promo__img(src=promoImgSrc, alt=promoImgAlt)
+      .promo__button
+        +primary-button({
+          buttonText,
+          buttonLink,
+          forPromo: btnForPromo,
+        })

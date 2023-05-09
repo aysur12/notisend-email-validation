@@ -4,10 +4,9 @@
   justify-content: center;
   width: 160px;
   padding: 10px;
-
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 24px 48px rgba(23, 42, 63, 0.16);
+  background: rgb(255 255 255 / 60%);
+  box-shadow: 0 24px 48px rgb(23 42 63 / 16%);
 
   &_for {
     &_registration {

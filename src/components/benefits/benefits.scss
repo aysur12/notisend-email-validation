@@ -40,6 +40,7 @@
     margin: 0 20px;
     color: $black;
     @include font-h2;
+
     text-align: center;
 
     @media screen and (max-width: 767px) {
@@ -54,7 +55,7 @@
     & span {
       padding-right: 11px;
       margin-right: 6px;
-      background-color: rgba(22, 175, 253, 0.15);
+      background-color: rgb(22 175 253 / 15%);
     }
   }
 
@@ -62,7 +63,7 @@
     margin: 0 52px;
     padding: 45px 120px 45px 45px;
     background-color: $white;
-    box-shadow: 0px 24px 48px rgba(23, 42, 63, 0.16);
+    box-shadow: 0 24px 48px rgb(23 42 63 / 16%);
     list-style-type: none;
 
     @media screen and (max-width: 1060px) {
@@ -97,7 +98,7 @@
     @media screen and (max-width: 767px) {
       flex-direction: column;
       padding: 30px;
-      box-shadow: 0px 24px 48px rgba(23, 42, 63, 0.16);
+      box-shadow: 0 24px 48px rgb(23 42 63 / 16%);
       border-radius: 4px;
     }
 
@@ -129,6 +130,7 @@
     margin: 0;
     color: $black;
     @include font-h5;
+
     text-align: left;
 
     @media screen and (max-width: 767px) {
@@ -164,6 +166,7 @@
     margin: 0;
     color: $black;
     @include font-h2-small;
+
     text-align: center;
 
     @media screen and (max-width: 600px) {
@@ -212,6 +215,7 @@
     margin: 0;
     color: $gray;
     @include font-text-advantages;
+
     text-align: center;
 
     @media screen and (max-width: 1060px) {

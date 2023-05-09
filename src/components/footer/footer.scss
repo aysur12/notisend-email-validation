@@ -89,23 +89,25 @@
   }
 
   &__social-link-img {
-
     &_bg{
       &_orange:hover svg path,
       &_orange:focus svg path {
         fill: $orange;
         transition: fill 0.3s;
       }
+
       &_red:hover svg path,
       &_red:focus svg path {
         fill: $red;
         transition: fill 0.3s;
       }
+
       &_blue:hover svg path,
       &_blue:focus svg path {
         fill: $blue;
         transition: fill 0.3s;
       }
+
       &_cyan:hover svg path,
       &_cyan:focus svg path {
         fill: $cyan;

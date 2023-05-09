@@ -30,14 +30,14 @@
   &__down-block-up-row {
     @media screen and (max-width: 500px) {
       flex-direction: column;
-      gap: 20px;
+      gap: 14px;
     }
   }
 
   &__down-block-down-row {
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
     }
   }
 

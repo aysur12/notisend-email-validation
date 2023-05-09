@@ -84,6 +84,7 @@
   }
 
   &__arrow {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +94,9 @@
 
     &::before {
       content: '\e5cf';
+      position: absolute;
+      top: -12px;
+      right: -6px;
     }
   }
 

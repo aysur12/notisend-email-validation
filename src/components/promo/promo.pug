@@ -16,7 +16,8 @@ mixin promo(params= {})
     .promo__container
       .promo__heading
         h1.promo__title= titleText
-        p.promo__subtitle= subtitleText
+        p.promo__subtitle
+          != subtitleText
         .promo__img-block
           img.promo__img(src=promoImgSrc, alt=promoImgAlt)
       .promo__button

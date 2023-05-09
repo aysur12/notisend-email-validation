@@ -12,10 +12,28 @@
   text-decoration: none;
   cursor: pointer;
 
+  @media screen and (max-width: 768px) {
+    font: 600 0.75rem/1.666 $main-font-family;
+    letter-spacing: 0.05em;
+  }
+
   &_for{
     &_promo {
       color: #1e6465;
       background: $white;
+
+      @media screen and (max-width: 600px) {
+        width: 220px;
+        padding: 12px 12px 11px 12px;
+        font: 600 0.75rem/1.666 $main-font-family;
+        text-align: center;
+      }
+    }
+
+    &_benefits {
+      @media screen and (max-width: 768px) {
+        padding: 12px 33px;
+      }
     }
   }
 

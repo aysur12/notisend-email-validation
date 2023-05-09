@@ -2,16 +2,31 @@ mixin footer-links(params={})
   -
     const {
       footerListItems= [],
+      forMobile = false,
     } = params;
 
-  .footer-links
-    .footer-links__container
+    const footerLinksForMobile = forMobile ? "footer-links_for_mobile" : "";
+    const footerLinksContainerForMobile = forMobile ? "footer-links__container_for_mobile" : "";
+
+  .footer-links(class= `${footerLinksForMobile}`)
+    nav.footer-links__container(class=`${footerLinksContainerForMobile}`)
       each item in footerListItems
         - const {title, linksItems= []} = item;
         .footer-links__links-item
-          h4.footer-links__links-item-title= title
-          ul.footer-links__links-list
-            each linkItem in linksItems
-              - const {href, text} = linkItem;
-              li.footer-links__links-list-item
-                a.footer-links__link(href=href)= text
+          if forMobile
+            details.footer-links__details(title= title)
+              summary.footer-links__summary
+                h4.footer-links__title= title
+                span.material-symbols-outlined.footer-links__arrow
+              ul.footer-links__dropdown
+                each linkItem in linksItems
+                  - const {href, text} = linkItem;
+                    li.footer-links__dropdown-item
+                      a.footer-links__dropdown-link(href=href)= text
+          else
+            h4.footer-links__links-item-title= title
+            ul.footer-links__links-list
+              each linkItem in linksItems
+                - const {href, text} = linkItem;
+                li.footer-links__links-list-item
+                  a.footer-links__link(href=href)= text

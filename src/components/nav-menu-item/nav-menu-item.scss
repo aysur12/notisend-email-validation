@@ -3,11 +3,6 @@
   font: 600 1rem/2 $main-font-family;
   transition: color 0.3s;
 
-  &:focus,
-  &:hover {
-    color: $yellow;
-  }
-
   &__details {
 
     &::after {
@@ -55,6 +50,6 @@
   }
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined.nav-menu-item__arrow {
   font-size: 17px!important;
 }

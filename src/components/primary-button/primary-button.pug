@@ -4,8 +4,13 @@ mixin primary-button(params = {})
       buttonText= "",
       buttonLink= "",
       forPromo= false,
+      forBenefits= false,
     } = params;
 
     const primaryButtonForPromo = forPromo ? "primary-button_for_promo": "";
+    const primaryButtonForBenefits = forBenefits ? "primary-button_for_benefits": "";
 
-  a.primary-button(class= `${primaryButtonForPromo}` href= buttonLink)= buttonText
+  a.primary-button(
+    class= `${primaryButtonForPromo}${primaryButtonForBenefits}`
+    href= buttonLink
+    )= buttonText

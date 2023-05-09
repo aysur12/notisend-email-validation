@@ -11,7 +11,9 @@ block content
     section.page__promo
       +promo({
         titleText: "Email валидация",
-        subtitleText: "Удалите сомнительные email-адреса до того, как они станут проблемой",
+        subtitleText: `<span>Удалите сомнительные </span>
+                      <span>email-адреса до того, как они </span>
+                      <span>станут проблемой</span>`,
         buttonLink: "/mock-address/change-me",
         buttonText: "приступить",
         btnForPromo: true,
@@ -44,7 +46,7 @@ block content
         advantagesTitle: "Валидация email обеспечит:",
         advantagesItems: [
           {
-            strongText: "высокую доставляемость ",
+            strongText: "высокую доставляемость <br>",
             text: "ваших писем",
           },
                     {

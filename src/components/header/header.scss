@@ -13,6 +13,33 @@
     height: 749px;
     background-image: url('../../assets/images/background-banner.png');
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 1420px) {
+      width: 71.6%;
+      height: 664px;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 1060px) {
+      width: 100%;
+      height: 720px;
+    }
+
+    @media screen and (min-width: 780px) and (max-width: 1059px) {
+      height: 705px;
+    }
+
+    @media screen and (min-width: 731px) and (max-width: 779px) {
+      height: 730px;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 670px) {
+      height: 700px;
+    }
+
+    @media screen and (max-width: 600px) {
+      height: 467px;
+    }
   }
 
   &__container {
@@ -21,10 +48,101 @@
     max-width: 1322px;
     margin: 0 auto;
     padding: 35px 16px 0;
+
+    @media screen and (max-width: 1060px) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 16px;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    @media screen and (max-width: 1060px) {
+      display: block;
+      width: 40px;
+      height: 40px;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.active {
+      position: fixed;
+    }
+
+    &.active span:nth-of-type(1) {
+      display: none;
+    }
+
+    &.active span:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+      background-color: $cyan;
+    }
+
+    &.active span:nth-of-type(3) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+      background-color: $cyan;
+    }
+  }
+
+  &__menu-btn-span {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $white;
+    border-radius: 2px;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+
+    &:nth-of-type(2) {
+      @media screen and (max-width: 1060px) {
+        top: calc(50% - 10px);
+      }
+
+      @media screen and (max-width: 600px) {
+        top: calc(50% - 5px);
+      }
+    }
+    &:nth-of-type(3) {
+
+      @media screen and (max-width: 1060px) {
+        top: calc(50% + 10px);
+      }
+
+      @media screen and (max-width: 600px) {
+        top: calc(50% + 5px);
+      }
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @media screen and (max-width: 1060px) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 100px;
+      height: 26px;
+    }
+
+    @media screen and (max-width: 375px) {
+      margin-left: 17px;
+    }
   }
 
   &__menu {
@@ -32,11 +150,51 @@
     align-items: center;
     justify-content: space-between;
     flex-basis: 1030px;
+
+    &.active {
+      gap: 20px;
+      transform: translateX(0);
+
+      & .nav-menu-item__summary {
+        color: $cyan;
+      }
+
+      & .nav-menu-item__summary:focus {
+        color: $yellow;
+      }
+    }
+
+    @media screen and (max-width: 1060px) {
+      z-index: 5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 20px 15px;
+      background: $light-gray;
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
   }
 
   &__buttons {
     display: flex;
     gap: 20px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 1060px) {
+      margin: 0;
+    }
+  }
+
+  &__mobile-header-login-button {
+    display: none;
+
+    @media screen and (max-width: 1060px) {
+      display: block;
+    }
+    
   }
 }

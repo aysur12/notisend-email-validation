@@ -1,6 +1,5 @@
 .mobile-header-login-button {
-  display: none;
-  width: 37px;
+  min-width: 37px;
 
   &__link {
     color: $white;
@@ -13,6 +12,14 @@
     &:hover,
     &:focus {
       color: $orange;
+    }
+
+    @media screen and (max-width: 1060px) {
+      font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 0.75rem;
     }
   }
 }

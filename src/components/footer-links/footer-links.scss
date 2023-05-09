@@ -2,12 +2,36 @@
   width: 100%;
   background-color: $white;
 
+  @media screen and (max-width: 1060px) {
+    display: none;
+  }
+
+  &_for{
+    &_mobile {
+      display: none;
+
+      @media screen and (max-width: 1060px) {
+        display: block;
+      }
+    }
+  }
+
   &__container {
     display: flex;
     gap: 30px;
     max-width: 1350px;
     margin: 0 auto;
     padding: 60px 30px;
+
+    &_for{
+      &_mobile {
+        @media screen and (max-width: 767px) {
+          flex-direction: column;
+          gap: 15px;
+          padding: 45px 30px;
+        }
+      }
+    }
   }
 
   &__links-item {
@@ -15,6 +39,79 @@
     flex-direction: column;
     gap: 12px;
     flex-basis: 25%;
+  }
+
+  &__details {
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 15px;
+      border-bottom: 1px solid $border-dropdown-color;
+    }
+
+    &::after {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      content: attr(title);
+    }
+
+    &[open] .footer-links__arrow::before {
+      content: '\e5ce';
+    }
+  }
+
+  &__summary {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    outline: none;
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
+
+    &:focus {
+      color: $yellow;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $gray;
+    @include font-h4-mobile;
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: $cyan;
+    text-align: center;
+
+    &::before {
+      content: '\e5cf';
+    }
+  }
+
+  &__dropdown {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__dropdown-link {
+    color: $gray;
+    font: 400 0.938rem/2 $main-font-family;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
   }
 
   &__links-item-title {

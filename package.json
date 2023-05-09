@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://aysur12.github.io/notisend-email-validation",
   "scripts": {
     "start": "gulp start",
     "build": "cross-env NODE_ENV=production gulp build",

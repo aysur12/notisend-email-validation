@@ -11,6 +11,11 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    color: $yellow;
+  }
+
   @media screen and (max-width: 768px) {
     font: 600 0.75rem/1.666 $main-font-family;
     letter-spacing: 0.05em;
@@ -20,6 +25,11 @@
     &_promo {
       color: #1e6465;
       background: $white;
+
+      &:hover,
+      &:focus {
+        color: $orange;
+      }
 
       @media screen and (max-width: 600px) {
         width: 220px;
@@ -36,8 +46,5 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    color: $orange;
-  }
+
 }
